@@ -9,7 +9,7 @@ const pool = new Pool({
   connectionString: 'postgres://nxxhgnvh:Lc361RU23_qgMnSWMH7613MSiVlFCI0B@hattie.db.elephantsql.com/nxxhgnvh'
 });
 
-app.get('https://bullshitspapi.onrender.com', async (req, res) => {
+app.get('/api/sites', async (req, res) => {
   try {
     const result = await pool.query('SELECT * FROM  hjemmesiders_co2');
     res.json(result.rows);
@@ -19,7 +19,7 @@ app.get('https://bullshitspapi.onrender.com', async (req, res) => {
   }
 });
 
-app.get('https://bullshitspapi.onrender.com', async (req, res) => {
+app.get('/api/sites', async (req, res) => {
   try {
     const result = await pool.query('SELECT * FROM  infrastruktur');
     res.json(result.rows);
